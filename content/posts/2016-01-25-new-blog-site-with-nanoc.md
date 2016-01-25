@@ -51,12 +51,12 @@ gem 'guard-bundler'
 gem 'guard-livereload'
 ```
 
-###
-
 ### Use HAML as Template Language
 
 `~ yield` rather than `= yield`
 otherwise you will get wrong indentation in code blocks.
+
+Use this http://htmltohaml.com/ to convert HTML into HAML.
 
 ### Adopt Lanyon Theme
 
