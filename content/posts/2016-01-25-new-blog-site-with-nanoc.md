@@ -43,13 +43,24 @@ created_at: 2016-01-25 15:12:04 +0800
 Because in Jekyll, code blocks are surrounded by a `div.highlight` block but not
 in nanoc.
 
+### Use `guard`
+
+```ruby
+gem 'guard-nanoc'
+gem 'guard-bundler'
+gem 'guard-livereload'
+```
+
+###
+
+### Use HAML as Template Language
+
+`~ yield` rather than `= yield`
+otherwise you will get wrong indentation in code blocks.
 
 ### Adopt Lanyon Theme
 
 #### Including Blogging helpers
-
-#### Rewriting `index.html`
-
 
 ### Extra Bits: Rakefile
 
