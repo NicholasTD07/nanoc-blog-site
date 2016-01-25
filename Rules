@@ -12,6 +12,7 @@ end
 
 compile '/**/*.md' do
   filter :kramdown, input: 'GFM'
+  filter :colorize_syntax, :default_colorizer => :pygmentsrb
   layout '/default.*'
 end
 
