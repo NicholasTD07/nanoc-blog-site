@@ -12,3 +12,5 @@ gem 'nokogiri'
 gem 'guard-nanoc'
 gem 'guard-bundler'
 gem 'guard-livereload'
+
+gem 'haml'
