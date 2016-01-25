@@ -9,6 +9,7 @@ GEM
     nanoc (4.1.2)
       cri (~> 2.3)
     rack (1.6.4)
+    rake (10.4.2)
 
 PLATFORMS
   ruby
@@ -16,6 +17,7 @@ PLATFORMS
 DEPENDENCIES
   adsf
   nanoc
+  rake
 
 BUNDLED WITH
    1.10.6
