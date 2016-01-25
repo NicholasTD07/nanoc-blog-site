@@ -53,12 +53,33 @@ gem 'guard-livereload'
 
 ### Use HAML as Template Language
 
+#### Code block
+
 `~ yield` rather than `= yield`
 otherwise you will get wrong indentation in code blocks.
 
+#### HTML to HAML
 Use this http://htmltohaml.com/ to convert HTML into HAML.
 
+#### Add Rules
+
+```rb
+compile '/**/*.haml' do
+  filter :haml
+  layout '/default.*'
+end
+```
+
+```diff
+- route '/**/*.{html,md}' do
++ route '/**/*.{html,md,haml}' do
+```
+
 ### Adopt Lanyon Theme
+
+* Remove the stylesheet that comes with nanoc itself
+* Copy and paste Lanyon's css files into content
+* Add links in `/layouts/default.haml`
 
 #### Including Blogging helpers
 
