@@ -1,4 +1,13 @@
-desc "Create a new post"
+desc 'Bootstrap nanoc blogging environment'
+task :bootstrap do
+  puts 'Installing Pygments with pip'
+  system 'pip install Pygments'
+  puts 'Installing pygments.rb with bundle'
+  system 'bundle install'
+end
+task :b => :bootstrap
+
+desc 'Create a new post'
 task :new, :title do |t, args|
   mkdir_p './content/posts'
   args.with_defaults(:title => 'new-post')
@@ -19,3 +28,4 @@ task :new, :title do |t, args|
     post.puts "---\n\n"
   end
 end
+task :n => :new
