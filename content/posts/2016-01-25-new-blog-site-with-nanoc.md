@@ -24,14 +24,16 @@ Wanna know how this fantastic blog came alive?
 
 ## Why Nanoc?
 
-Nanoc is simple to set up and use, and it allows you to pick things you like to build the site you want, though it could take some time to build your very own blog/site generator because Nanoc is so generic.
+Nanoc is simple to set up and use, and it allows you to pick things you like to
+build the site you want, though it could take some time to build your very own
+blog/site generator because Nanoc is so generic.
 
 * I can build everything from scratch
 * Whitebox
 
 ## Getting Started
 
-First you need to have Ruby and Bundler working.
+First you need to have Ruby, Python and Bundler working. Before we run any command in a terminal, put the contents of `Gemfile` and `.gitignore` into them
 
 Gemfile:
 
@@ -50,30 +52,127 @@ tmp/
 output/
 ```
 
-Install 
+Run `bundle install` to install all the shiny gems!
 
-## Create site with nanoc
+## Create site with Nanoc
+
+After you have all the gems ready, run `nanoc create-site your-site-name` to
+create a site.
+
+To view your site:
+
+* `cd` into your site and type `nanoc` to compile the site.
+* Run `nanoc view` to have Nanoc create a server for you to view your site in
+a browser.
+
+You can keep the `nanoc view` running while making changes to your site.
+However, with every change you make to the site, you will need to run `nanoc`
+again. It sounds very repetitive, right? Don't worry. We will be using Guard to
+help us automate things.
 
 Commit: #1e2fabe
-``
 
-## Including Blogging helpers
+## Including Helpers
+
+Nanoc provides handy [helpers](http://nanoc.ws/doc/reference/helpers/) for us to
+build our site faster. Include the `Blogging, LinkTo, Rendering, Tagging` helpers by placing
+a ruby file under `/lib/`(in the root dir of your nanoc site dir) 
+
+```ruby
+# nanoc-site/lib/include_helpers.rb
+include Nanoc::Helpers::Blogging
+include Nanoc::Helpers::LinkTo
+include Nanoc::Helpers::Rendering
+include Nanoc::Helpers::Tagging
+```
+
+Commit: #15c0feb
 
 ## Enable Markdown
 
-## Custom Redcarpet Filter
+From Nanoc's official tutorial,
+> Nanoc has filters, which transform content from one format into another.
 
-### Enable GitHub Flavor Markdown
+There are predefined filters. It is also very easy to write one by yourself.
 
-Gem
-* Redcarpet
+### Enable GitHub Flavored Markdown
 
-### in `Rules`
+Add the RedCarpet gem into `Gemfile`.
+
+```ruby
+# Gemfile
+gem 'redcarpet'
+
+# Remeber to run `bundle` after editing the Gemfile
+```
+
+[GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
+
+### Add a Rule for Markdown Files
+
+> The Rules file is used to describe the processing rules for items and layouts.
+
+This is the file that needs to be modified in order to tell Nanoc to use the
+redcarpet filter, which is provided by Nanoc.
+
+```ruby
+# Rules
+compile '/**/*.md' do
+  filter :redcarpet
+  layout '/default.*'
+end
+```
+
+> Compilation rules describe how items are processed.
+
+This rule matches items have the `md` extension, and says such items will run
+the `redcarpet` filter, followed by laying out the item using the default layout.
+
+### [Write Pages in Markdown](http://nanoc.ws/doc/tutorial/#write-pages-in-markdown)
+
+Get rid of the content in content/index.html (but leave the frontmatter intact), and replace it with Markdown:
+
+```
+---
+title: "Denis’ Guide to Awesomeness"
+---
+
+Now is the time for all good men to come to the aid of their country. This is just a regular paragraph.
+
+## Shopping list
+
+1. Bread
+2. Butter
+3. Refined uranium
+```
+
+Rename the content/index.html file to content/index.md. md is a file extension that is commonly used with Markdown.
+
+Run ``
+
 
 ### Enable Syntax Highlighting for Markdown
 
-Gem
-* pygments.rb
+To enable syntax highlighting easily, we will need to write a custom filter
+which combines the power of [RedCarpet](https://github.com/vmg/redcarpet)
+(Markdown -> HTML) and [Pygments](http://pygments.org/) (Master of Syntax
+Highlighting).
+
+First install the pygments package with Python's package manager `pip`.
+
+```sh
+pip install pygments
+```
+
+Then update the `Gemfile` and run `bundle` again.
+
+```ruby
+# Gemfile
+gem 'pygments.rb'
+gem 'nokogiri'
+```
+
+#### Custom RedCarpet Filter
 
 
 ### Adding `syntax.css` from Lanyon
