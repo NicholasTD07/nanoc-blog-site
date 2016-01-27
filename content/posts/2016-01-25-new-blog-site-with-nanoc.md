@@ -1,22 +1,43 @@
 ---
-title: "new-blog-site-with-nanoc"
+title: "New Blog Site With Nanoc"
 created_at: 2016-01-25 15:12:04 +0800
 kind: article
 ---
 
+Spent about a day to make this **shinny** new blog site with [Nanoc](http://nanoc.ws/) and some other open source tools.
+
+Summary:
+
+* [Nanoc](http://nanoc.ws/) as static site generator
+* [HAML](http://haml.info/) as template engine
+* [Lanyon](http://lanyon.getpoole.com/) as the theme you are seeing right now
+* [Guard](https://github.com/guard/guard) for regenerating site and live-reloading browser
+* [Rake](https://github.com/ruby/rake) for manging tasks
+* [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) for writing blogs
+
+Wanna know how this fantastic blog came alive?
+
 <!-- more -->
+
+## Why Nanoc?
+
+Nanoc is simple to set up and use, and it allows you to pick things you like to build the site you want, though it could take some time to build your very own blog/site generator because Nanoc is so generic.
+
+* I can build everything from scratch
+* Whitebox
 
 ## Steps
 
+First you need to have Ruby and Bundler working.
+
 ### Gemfile
 
-* nanoc
-* adsf
-* rake
-* kramdown
-* pygments.rb
-
-* nokogiri
+```ruby
+gem 'nanoc' # Core
+gem 'adsf'  # for `nanoc view`
+gem 'rake'
+gem 'nokogiri'
+```
 
 ### .gitignore
 
@@ -34,7 +55,13 @@ kind: article
 
 #### Enable Kramdown to take GitHub Flavor Markdown
 
+Gem
+* kramdown
+
 #### Enable Syntax Highlighting for Markdown
+
+Gem
+* pygments.rb
 
 `colorize_syntax`
 
