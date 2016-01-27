@@ -25,6 +25,8 @@ created_at: 2016-01-25 15:12:04 +0800
 
 ``
 
+### Including Blogging helpers
+
 ### Enable Markdown in `Rules`
 
 #### Enable Kramdown to take GitHub Flavor Markdown
@@ -80,8 +82,6 @@ end
 * Remove the stylesheet that comes with nanoc itself
 * Copy and paste Lanyon's css files into content
 * Add links in `/layouts/default.haml`
-
-#### Including Blogging helpers
 
 ### Extra Bits: Rakefile
 
