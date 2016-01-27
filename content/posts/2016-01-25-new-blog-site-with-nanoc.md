@@ -4,6 +4,8 @@ created_at: 2016-01-25 15:12:04 +0800
 kind: article
 ---
 
+<!-- more -->
+
 ## Steps
 
 ### Gemfile
