@@ -29,11 +29,11 @@ Nanoc is simple to set up and use, and it allows you to pick things you like to 
 * I can build everything from scratch
 * Whitebox
 
-## Steps
+## Getting Started
 
 First you need to have Ruby and Bundler working.
 
-### Gemfile
+Gemfile:
 
 ```ruby
 gem 'nanoc' # Core
@@ -42,37 +42,41 @@ gem 'rake'
 gem 'nokogiri'
 ```
 
-### .gitignore
+.gitignore:
 
-* crash.log
-* tmp/
-* output/
+```
+crash.log
+tmp/
+output/
+```
 
-### Create site with nanoc
+Install 
+
+## Create site with nanoc
 
 Commit: #1e2fabe
 ``
 
-### Including Blogging helpers
+## Including Blogging helpers
 
-### Enable Markdown
+## Enable Markdown
 
-### Custom Redcarpet Filter
+## Custom Redcarpet Filter
 
-#### Enable GitHub Flavor Markdown
+### Enable GitHub Flavor Markdown
 
 Gem
 * Redcarpet
 
-#### in `Rules`
+### in `Rules`
 
-#### Enable Syntax Highlighting for Markdown
+### Enable Syntax Highlighting for Markdown
 
 Gem
 * pygments.rb
 
 
-#### Adding `syntax.css` from Lanyon
+### Adding `syntax.css` from Lanyon
 
 * Download [Lanyon](#)
 * Move `syntax.css` from `lanyon/public/` to `/content/`
@@ -81,7 +85,7 @@ Gem
 Because in Jekyll, code blocks are surrounded by a `div.highlight` block but not
 in nanoc.
 
-### Use `guard`
+## Use `guard`
 
 ```ruby
 gem 'guard-nanoc'
@@ -89,17 +93,17 @@ gem 'guard-bundler'
 gem 'guard-livereload'
 ```
 
-### Use HAML as Template Language
+## Use HAML as Template Language
 
-#### Code block
+### Code block
 
 `~ yield` rather than `= yield`
 otherwise you will get wrong indentation in code blocks.
 
-#### HTML to HAML
+### HTML to HAML
 Use this http://htmltohaml.com/ to convert HTML into HAML.
 
-#### Add Rules
+### Add Rules
 
 ```rb
 compile '/**/*.haml' do
@@ -113,26 +117,26 @@ end
 + route '/**/*.{html,md,haml}' do
 ```
 
-### Adopt Lanyon Theme
+## Adopt Lanyon Theme
 
-#### CSS Files
+### CSS Files
 
 * Remove the stylesheet that comes with nanoc itself
 * Copy and paste Lanyon's css files into content
 
-#### Layouts
+### Layouts
 
 * Use [Convert HTML to HAML](http://htmltohaml.com/) to convert HTML templates
   into HAML
 * Turn Liquid template statements into HAML
 
-### Extra Bits
+## Extra Bits
 
-#### Helper Link to GitHub Commit
+### Helper Link to GitHub Commit
 
-#### Rake Task: New Post
+### Rake Task: New Post
 
-#### Rake Task: Bootstrap blogging environment
+### Rake Task: Bootstrap blogging environment
 
 ## TODOs
 
