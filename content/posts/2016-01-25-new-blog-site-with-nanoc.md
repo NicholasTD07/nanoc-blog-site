@@ -82,9 +82,16 @@ end
 
 ### Adopt Lanyon Theme
 
+#### CSS Files
+
 * Remove the stylesheet that comes with nanoc itself
 * Copy and paste Lanyon's css files into content
-* Add links in `/layouts/default.haml`
+
+#### Layouts
+
+* Use [Convert HTML to HAML](http://htmltohaml.com/) to convert HTML templates
+  into HAML
+* Turn Liquid template statements into HAML
 
 ### Extra Bits: Rakefile
 
