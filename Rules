@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require "./lib/html_with_pygments_render.rb"
+require "./lib/filters/markdown_with_pygments.rb"
 
 compile '/**/*.haml' do
   filter :haml

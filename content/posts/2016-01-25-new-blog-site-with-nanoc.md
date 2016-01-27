@@ -122,11 +122,13 @@ end
   into HAML
 * Turn Liquid template statements into HAML
 
-### Extra Bits: Rakefile
+### Extra Bits
 
-#### Task: New Post
+#### Helper Link to GitHub Commit
 
-#### Task: Bootstrap blogging environment
+#### Rake Task: New Post
+
+#### Rake Task: Bootstrap blogging environment
 
 ## TODOs
 
