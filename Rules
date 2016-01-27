@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require "./lib/html_with_pygments_render.rb"
+
 compile '/**/*.haml' do
   filter :haml
   layout '/default.*'
@@ -10,7 +12,7 @@ end
 # is not bundled with Nanoc or Ruby.
 
 compile '/**/*.md' do
-  filter :kramdown, input: 'GFM'
+  filter :pygmented_md
   filter :colorize_syntax, :default_colorizer => :pygmentsrb
   layout '/default.*'
 end

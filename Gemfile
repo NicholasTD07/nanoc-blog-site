@@ -5,7 +5,7 @@ gem 'nanoc'
 gem 'adsf'
 gem 'rake'
 
-gem 'kramdown'
+gem 'redcarpet'
 gem 'pygments.rb'
 gem 'nokogiri'
 

@@ -51,26 +51,28 @@ gem 'nokogiri'
 
 ### Including Blogging helpers
 
-### Enable Markdown in `Rules`
+### Enable Markdown
 
-#### Enable Kramdown to take GitHub Flavor Markdown
+### Custom Redcarpet Filter
+
+#### Enable GitHub Flavor Markdown
 
 Gem
-* kramdown
+* Redcarpet
+
+#### in `Rules`
 
 #### Enable Syntax Highlighting for Markdown
 
 Gem
 * pygments.rb
 
-`colorize_syntax`
 
 #### Adding `syntax.css` from Lanyon
 
 * Download [Lanyon](#)
 * Move `syntax.css` from `lanyon/public/` to `/content/`
 * Add it into `/layouts/default.html`
-* Replace all `.highlight` to `code` in `syntax.css`
 
 Because in Jekyll, code blocks are surrounded by a `div.highlight` block but not
 in nanoc.
