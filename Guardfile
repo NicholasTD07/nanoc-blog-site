@@ -9,5 +9,5 @@ guard :bundler do
 end
 
 guard 'livereload' do
-    watch(%r{%output/.*$})
+    watch(%r{output/.*$})
 end
