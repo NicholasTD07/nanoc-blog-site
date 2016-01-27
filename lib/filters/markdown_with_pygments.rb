@@ -8,7 +8,13 @@ class HTMLwithPygments < Redcarpet::Render::HTML
   end
 end
 
-Markdowner = Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
+Markdowner = Redcarpet::Markdown.new(HTMLwithPygments,
+                                     tables: true,
+                                     autolink: true,
+                                     underline: true,
+                                     strikethrough: true,
+                                     fenced_code_blocks: true,
+                                    )
 
 class MDFilter < Nanoc::Filter
   identifier :pygmented_md
