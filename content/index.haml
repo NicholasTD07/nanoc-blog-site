@@ -1,0 +1,23 @@
+.posts
+  - sorted_articles.each do |post|
+    .post
+      %h1.post-title
+        = link_to post[:title], post.path
+      %span.post-date
+        = post[:created_at]
+      = post.compiled_content
+-# .pagination
+-#   {% if paginator.next_page %}
+-#   %a.pagination-item.older{:href => "{{ site.baseurl }}/page{{paginator.next_page}}"} Older
+-#   {% else %}
+-#   %span.pagination-item.older Older
+-#   {% endif %}
+-#   {% if paginator.previous_page %}
+-#   {% if paginator.page == 2 %}
+-#   %a.pagination-item.newer{:href => "{{ site.baseurl }}/"} Newer
+-#   {% else %}
+-#   %a.pagination-item.newer{:href => "{{ site.baseurl }}/page{{paginator.previous_page}}"} Newer
+-#   {% endif %}
+-#   {% else %}
+-#   %span.pagination-item.newer Newer
+-#   {% endif %}
