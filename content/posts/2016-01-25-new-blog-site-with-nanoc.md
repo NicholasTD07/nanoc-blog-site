@@ -1,6 +1,9 @@
 ---
 title: "New Blog Site With Nanoc"
 created_at: 2016-01-25 15:12:04 +0800
+link_to_commits: true
+github_username: NicholasTD07
+repo: nanoc-blog-site
 kind: article
 ---
 
@@ -47,6 +50,7 @@ gem 'nokogiri'
 
 ### Create site with nanoc
 
+Commit: #1e2fabe
 ``
 
 ### Including Blogging helpers
