@@ -27,6 +27,10 @@ route '/**/*.{html,md,haml}' do
   end
 end
 
+compile '/**/*.{css}' do
+  write "/public/css#{item.identifier}" # identifier contains '/'
+end
+
 compile '/**/*' do
   write item.identifier.to_s
 end
