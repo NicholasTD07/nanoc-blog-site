@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+  <head>
+    <link href='http://gmpg.org/xfn/11' rel='profile'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type'>
+    <!-- Enable responsiveness on mobile devices -->
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1' name='viewport'>
+    <title>
+      About &middot; Nicholas T.
+    </title>
+    <!-- CSS -->
+    <link href='/public/css/poole.css' rel='stylesheet'>
+    <link href='/public/css/syntax.css' rel='stylesheet'>
+    <link href='/public/css/lanyon.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400' rel='stylesheet'>
+    <!-- Icons -->
+    <link href='/public/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
+    <link href='/public/favicon.ico' rel='shortcut icon'>
+    <!-- RSS -->
+    <link href='/atom.xml' rel='alternate' title='RSS' type='application/rss+xml'>
+  </head>
+  <body>
+    <!--
+      Target for toggling the sidebar `.sidebar-checkbox` is for regular
+      styles, `#sidebar-checkbox` for behavior.
+    -->
+    <input class='sidebar-checkbox' id='sidebar-checkbox' type='checkbox'>
+      <!-- Toggleable sidebar -->
+    </input>
+    <div class='sidebar' id='sidebar'>
+      <div class='sidebar-item'>
+        <p>
+          Things I learn along the way.
+        </p>
+      </div>
+      <nav class='sidebar-nav'>
+        <div class='sidebar-nav-item'>
+          <a href="/">Home</a>
+        </div>
+        <!--
+          The code below dynamically generates a sidebar nav of pages with
+          `layout: page` in the front-matter. See readme for usage.
+        -->
+        <div class='sidebar-nav-item active'>
+          <a href="/pages/about/">About</a>
+        </div>
+      </nav>
+      <div class='sidebar-item'>
+        <p>
+          &copy;
+          2016
+          All rights reserved.
+        </p>
+      </div>
+    </div>
+    <!--
+      Wrap is the content to shift when toggling the sidebar. We wrap the
+      content to avoid any CSS collisions with our real content.
+    -->
+    <div class='wrap'>
+      <div class='masthead'>
+        <div class='container'>
+          <h3 class='masthead-title'>
+            <a href="/">Nicholas T.</a>
+            <small>
+              An iOS Developer
+            </small>
+          </h3>
+        </div>
+      </div>
+      <div class='container content'>
+        <p class="message">
+          Hey there! Congrats! You have found the page which would make you a billionaire.
+          NO, I was kidding.
+        </p>
+        
+        <p>This blog site is made by <a href="https://github.com/NicholasTD07">@NicholasTD07</a></p>
+        
+        <p>Learn more and contribute on <a href="https://github.com/NicholasTD07/nanoc-blog-site">GitHub</a>.</p>
+        
+        <p>Have questions or suggestions? Feel free to <a href="https://github.com/NicholasTD07/nanoc-blog-site/issues/new">open an issue on GitHub</a> or <a href="https://twitter.com/NicholasTD07">ask me on Twitter</a>.</p>
+        
+        <p>Thanks for reading!</p>
+      </div>
+    </div>
+    <label class='sidebar-toggle' for='sidebar-checkbox'></label>
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+      
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+      
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+      
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
