@@ -13,6 +13,7 @@ Markdowner = Redcarpet::Markdown.new(HTMLwithPygments,
                                      autolink: true,
                                      underline: true,
                                      strikethrough: true,
+                                     no_intra_emphasis: true,
                                      fenced_code_blocks: true,
                                     )
 
