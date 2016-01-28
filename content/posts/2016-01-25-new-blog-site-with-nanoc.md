@@ -424,6 +424,13 @@ Commits: #b1c7b1f, #b954b3c
 
 ### Rake Task: New Post
 
+Use it like this: `rake new["A new blog post, YEAH!"]`.
+
+For ZSH users, do it this way `rake new\["A new blog post, YEAH!"\]`.
+
+It will create a blog post under `content/post/` with the filename being
+`Year-Month-Date-a-new-blog-post--yeah.md`.
+
 ## TODOs
 
 ### Assets Pipeline
