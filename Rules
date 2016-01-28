@@ -12,9 +12,9 @@ end
 # is not bundled with Nanoc or Ruby.
 
 compile '/**/*.md' do
-  filter :link_to_commit
   filter :pygmented_md
   filter :colorize_syntax, :default_colorizer => :pygmentsrb
+  filter :link_to_commit
   layout '/default.*'
 end
 

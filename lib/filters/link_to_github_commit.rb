@@ -27,7 +27,8 @@ Class.new(Nanoc::Filter) do
     content.gsub(/#(\w+)/) do |match|
       commit = match[1..-1] # escape starting #
       link = "https://github.com/#{github_username}/#{repo}/commit/#{commit}"
-      "[#{commit}](#{link})"
+      text = "##{commit}"
+      "<a href=#{link}>#{text}</a>"
     end
   end
 end
