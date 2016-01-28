@@ -377,13 +377,52 @@ end
 
 Commits: #cc306de, #89a773b
 
-## Extra Bits
+## Other Interesting Bits
 
-### Helper Link to GitHub Commit
-
-### Rake Task: New Post
+All is explained by the comments in the snippets below.
 
 ### Rake Task: Bootstrap blogging environment
+
+```ruby
+# Add description to bootstrap task
+desc 'Bootstrap nanoc blogging environment'
+# Create a new bootstrap task
+task :bootstrap do
+  # `puts` prints the argument in terminal
+  # `system` runs the argument as a terminal command
+  puts 'Installing Pygments with pip'
+  system 'pip install Pygments'
+  puts 'Installing pygments.rb with bundle'
+  system 'bundle install'
+end
+# Alias(kind of) b to bootstrap
+task :b => :bootstrap
+```
+
+### Filter: Link to GitHub Commit
+
+All the links to commits in this post is processed by this filter.
+
+You can put `link_to_commits`, `github_username` and `repo` in the frontmatter
+of a file.
+
+```yaml
+---
+title: "Some blog post"
+link_to_commits: true
+github_username: NicholasTD07
+repo: nanoc-blog-site
+---
+```
+
+This filter will go through the file and find text matching a hashtag followed
+by a string then turn the matches into links to the commits, like this #a09255e.
+
+Source: [lib/filters/link_to_github_commit.rb](https://github.com/NicholasTD07/nanoc-blog-site/blob/master/lib/filters/link_to_github_commit.rb)
+
+Commits: #b1c7b1f, #b954b3c
+
+### Rake Task: New Post
 
 ## TODOs
 
