@@ -5,12 +5,10 @@
   / Enable responsiveness on mobile devices
   %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1", :name => "viewport"}
   %title
-  -# TODO
-  -# {% if page.title == "Home" %}
-  -#   {{ site.title }} &middot; {{ site.tagline }}
-  -# {% else %}
-  -#   {{ page.title }} &middot; {{ site.title }}
-  -# {% endif %}
+    - if item[:title] == "Home"
+      = "#{config[:site][:title]} &middot; #{config[:site][:baseURL]}"
+    - else
+      = "#{item.fetch(:title, "NO TITLE... FIX ME PLS!")} &middot; #{config[:site][:title]}"
   / CSS
   %link{:href => "/public/css/poole.css", :rel => "stylesheet"}
   %link{:href => "/public/css/syntax.css", :rel => "stylesheet"}

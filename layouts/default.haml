@@ -10,9 +10,9 @@
       .masthead
         .container
           %h3.masthead-title
-            -# TODO!
-            -# %a{:href => "{{ site.baseurl }}/", :title => "Home"} {{ site.title }}
-            -# %small {{ site.tagline }}
+            = link_to config[:site][:title], config[:site][:baseURL]
+            %small
+              = config[:site][:tagline]
       .container.content
         ~ yield
     %label.sidebar-toggle{:for => "sidebar-checkbox"}
