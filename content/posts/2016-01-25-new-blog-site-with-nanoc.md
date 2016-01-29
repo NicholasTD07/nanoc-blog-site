@@ -23,24 +23,6 @@ Wanna know how this fantastic blog came alive?
 
 <!-- more -->
 
-## How to Use This Blog Site as a Template for Your Site(s)
-
-Setup:
-
-```sh
-rake b # b for bootstrap
-# It installs the dependencies with `pip` and `bundle`
-# See Rakefile for more details
-
-# DONE! That's all.
-```
-
-Usage:
-
-* Use `rake new[post-name]` to create new posts in `content/posts/`
-* Run `bundle exec guard` to re-gen the site when there's any change to the source of the site
-* Run `nanoc view` to create a local server which serves the generated site
-
 ## Why Nanoc?
 
 Nanoc is simple to set up and use, and it allows you to pick things you like to
