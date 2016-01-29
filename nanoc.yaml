@@ -1,10 +1,11 @@
 # CUSTOM CONFIG #
 
 site:
-  title: "Nicholas T."
-  tagline: "An iOS Developer"
-  description: "Things I learn along the way."
-  # baseURL: "http://dev.nicktd.com/nanoc-blog-site"
+  title: "Nanoc Blog Site"
+  tagline: 'Created by <a href="https://github.com/NicholasTD07">Nicholas T.</a>'
+  description: |
+    Create a site with Nanoc.<br>
+    Write in Markdown and HAML.<br>
 
 # NANOC CONFIG #
 
