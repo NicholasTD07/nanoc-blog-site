@@ -27,6 +27,7 @@ task :new, :title do |t, args|
     post.puts "created_at: #{Time.now}"
     post.puts 'kind: article'
     post.puts "---\n\n"
+    post.puts "<!-- more -->\n\n"
   end
 end
 task :n => :new
