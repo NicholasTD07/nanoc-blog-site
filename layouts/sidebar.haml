@@ -1,3 +1,4 @@
+- baseURL = config[:site][:baseURL]
 /
   Target for toggling the sidebar `.sidebar-checkbox` is for regular
   styles, `#sidebar-checkbox` for behavior.
@@ -8,24 +9,16 @@
     %p
       = config[:site][:description]
   %nav.sidebar-nav
-    - if item.path == '/'
-      .sidebar-nav-item.active
-        = link_to "Home", config[:site][:baseURL]
-    - else
-      .sidebar-nav-item
-        = link_to "Home", config[:site][:baseURL]
+    %div{class: "sidebar-nav-item #{'active' if item.path == '/'}"}
+      = link_to "Home", '/'
     /
       The code below dynamically generates a sidebar nav of pages with
       `layout: page` in the front-matter. See readme for usage.
 
-    -# {% assign pages_list = site.pages | sort:"url" %}
-    -# {% for node in pages_list %}
-    -# {% if node.title != null %}
-    -# {% if node.layout == "page" %}
-    -# %a.if.endif{:class => "sidebar-nav-item{% page.url == node.url %} active{% %}", :href => "{{ node.url }}"} {{ node.title }}
-    -# {% endif %}
-    -# {% endif %}
-    -# {% endfor %}
+    - pages.each do |page|
+      %div{class: "sidebar-nav-item #{'active' if item.path == page.path}"}
+        = link_to page[:title], page.path
+
   .sidebar-item
     %p
       \&copy;

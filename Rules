@@ -5,6 +5,7 @@ require "./lib/filters/markdown_with_pygments.rb"
 compile '/**/*.haml' do
   filter :haml
   layout '/default.*'
+  filter :relativize_paths, type: :html
 end
 
 # This is an example rule that matches Markdown (.md) files, and filters them
@@ -16,6 +17,7 @@ compile '/**/*.md' do
   filter :colorize_syntax, :default_colorizer => :pygmentsrb
   filter :link_to_commit
   layout '/default.*'
+  filter :relativize_paths, type: :html
 end
 
 # For `html` or `md` files,
@@ -32,6 +34,7 @@ end
 
 compile '/**/*.{css}' do
   write "/public/css#{item.identifier}" # identifier contains '/'
+  filter :relativize_paths, type: :css
 end
 
 compile '/**/*' do

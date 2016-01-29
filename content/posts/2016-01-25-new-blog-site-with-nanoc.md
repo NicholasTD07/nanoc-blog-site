@@ -375,7 +375,7 @@ end
   into HAML
 * Turn Liquid template statements into HAML ones
 
-Commits: #cc306de, #89a773b
+Commits: #cc306de, #89a773b, #72f5410
 
 ## Other Interesting Bits
 
@@ -432,6 +432,8 @@ It will create a blog post under `content/post/` with the filename being
 `Year-Month-Date-a-new-blog-post--yeah.md`.
 
 ## TODOs
+
+* Pagination
 
 ### Assets Pipeline
 

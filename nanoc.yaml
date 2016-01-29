@@ -1,10 +1,10 @@
 # CUSTOM CONFIG #
 
 site:
-  baseURL: "http://dev.nicktd.com/"
   title: "Nicholas T."
   tagline: "An iOS Developer"
   description: "Things I learn along the way."
+  # baseURL: "http://dev.nicktd.com/nanoc-blog-site"
 
 # NANOC CONFIG #
 

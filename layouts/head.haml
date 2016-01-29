@@ -1,3 +1,4 @@
+-# - baseURL = config[:site][:baseURL]
 %head
   %link{:href => "http://gmpg.org/xfn/11", :rel => "profile"}
   %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
@@ -6,7 +7,7 @@
   %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1", :name => "viewport"}
   %title
     - if item[:title] == "Home"
-      = "#{config[:site][:title]} &middot; #{config[:site][:baseURL]}"
+      = "#{config[:site][:title]} &middot; #{config[:site][:tagline]}"
     - else
       = "#{item.fetch(:title, "NO TITLE... FIX ME PLS!")} &middot; #{config[:site][:title]}"
   / CSS
