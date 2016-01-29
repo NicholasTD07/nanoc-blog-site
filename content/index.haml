@@ -8,7 +8,7 @@ title: Home
         = link_to post[:title], post.path
       %span.post-date
         = post[:created_at]
-      = summary_of_post(post)
+      ~ summary_of_post(post)
 
 -# .pagination
 -#   {% if paginator.next_page %}
