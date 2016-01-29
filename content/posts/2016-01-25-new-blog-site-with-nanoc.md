@@ -7,7 +7,7 @@ repo: nanoc-blog-site
 kind: article
 ---
 
-Spent about a day to make this **shinny** new blog site with [Nanoc](http://nanoc.ws/) and some other open source tools.
+Spent a weekend to make this **shinny** new blog site with [Nanoc](http://nanoc.ws/) and some other open source tools.
 
 Summary:
 
@@ -33,18 +33,21 @@ blog/site generator because Nanoc is so generic.
 * Nanoc is easy to be extended
 * I can build everything from scratch
   * I know this site and its source code inside out
-* Jekyll (previous static generator powering my blog) is a black box to me
+
+When comparing Jekyll (previous static generator powering my blog) with Nanoc
+
+* Jekyll is a black box to me
   * Complex
   * Hard to tweak
-  * Code, written by other people, to read
+  * Code (written by other people) to read
 
 ## Getting Started
 
 First you need to have Ruby, Python and Bundler working.
 
-Make a directory for your site.
-I like to do it in command line `mkdir your-site-name`. You can do it anyway you
-like. `cd` into your site in your terminal/command-line.
+Make a directory for your site.  I like doing it in command line with `mkdir
+your-site-name`. You can do it anyway you like. `cd` into your site in your
+terminal/command-line.
 
 
 Before we run any command in a terminal, put the contents of `Gemfile` and
@@ -55,14 +58,13 @@ Gemfile:
 ```ruby
 gem 'nanoc' # Core
 gem 'adsf'  # for `nanoc view`
-gem 'rake'
-gem 'nokogiri'
+gem 'rake'  # for writing tasks help us blogging
 ```
 
 .gitignore:
 
 ```sh
-# If you use git for version control,
+# If you use git for version control, which you should,
 # otherwise you don't need this.
 crash.log
 tmp/
@@ -73,7 +75,7 @@ Run `bundle install` to install all the shiny gems. Let's start the party!
 
 ## Create a Site with Nanoc
 
-After you have all the gems ready, run `nanoc create-site . -f` to
+After you have all the gems installed, run `nanoc create-site . -f` to
 create a site while you are in the site directory. `-f` is needed because the
 directory already exists.
 
@@ -97,7 +99,7 @@ build our site faster. Include the `Blogging, LinkTo, Rendering, Tagging` helper
 a ruby file under `lib/`(in the root dir of your nanoc site dir) 
 
 ```ruby
-# nanoc-site/lib/include_helpers.rb
+# your-nanoc-site/lib/include_helpers.rb
 include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::LinkTo
 include Nanoc::Helpers::Rendering
@@ -138,9 +140,9 @@ gem 'redcarpet'
 
 ### Add a Rule for Markdown Files
 
-> The Rules file is used to describe the processing rules for items and layouts.
+> The `Rules` file is used to describe the processing rules for items and layouts.
 
-This is the file that needs to be modified in order to tell Nanoc to use the
+The `Rules` file needs to be modified in order to tell Nanoc to use the
 redcarpet filter, which is provided by Nanoc.
 
 ```ruby
@@ -182,7 +184,7 @@ changes to your site.
 
 ### Enable Syntax Highlighting for Markdown
 
-To enable syntax highlighting easily, we will need to write a custom filter
+To enable syntax highlighting __easily__, we will need to write a custom filter
 which combines the power of [RedCarpet](https://github.com/vmg/redcarpet)
 (Markdown -> HTML) and [Pygments](http://pygments.org/) (Master of Syntax
 Highlighting).
@@ -242,10 +244,14 @@ Reference: [https://github.com/flyingmachine/nanoc-blog/blob/master/lib/rule_hel
 
 ## Use `guard`
 
+<p class='message'>
+  Finally! XD
+</p>
+
 Are you tired of typing `nanoc` again and again when every time you make a
 change to the site? Guard is here to help you!
 
-Put the content into their files respectively.
+Put following snippets into files respectively.
 
 ```ruby
 # Add these in Gemfile
@@ -288,7 +294,7 @@ Commit: #52db121
 
 ## Use HAML as Template Language
 
-You can skip this section if you are not interested in using HAML.
+You can skip this section if you are not interested in using [HAML](http://haml.info/).
 
 Update `Gemfile`:
 
@@ -299,8 +305,10 @@ gem 'haml'
 
 ### Code block
 
-Use `~ yield` rather than `= yield` in `layouts/*` otherwise you will get wrong indentation in
+Use `~ yield` rather than `= yield` in `layouts/*.haml` otherwise you will get wrong indentation in
 code blocks.
+
+See this commit: #22e84dd
 
 ### Add/Update Rules
 
@@ -415,12 +423,13 @@ It will create a blog post under `content/post/` with the filename being
 
 ## TODOs
 
+* Multilingual (see [this doc from Nanoc](http://nanoc.ws/doc/guides/creating-multilingual-sites/))
 * Pagination
 
 ### Assets Pipeline
 
-* [  ] Compile css files into one
-* [  ] Compile js files into one
+* [  ] Compile CSS files into one
+* [  ] Compile JS files into one
 
 ## Reference
 
