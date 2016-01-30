@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <!-- Enable responsiveness on mobile devices -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+    <title>
+      How to Use this Blog Site · Nanoc Blog Site
+    </title>
+    <!-- CSS -->
+    <link href="../../public/css/poole.css" rel="stylesheet">
+    <link href="../../public/css/syntax.css" rel="stylesheet">
+    <link href="../../public/css/lanyon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400" rel="stylesheet">
+    <!-- Icons -->
+    <link href="../../public/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="../../public/favicon.ico" rel="shortcut icon">
+    <!-- RSS -->
+    <link href="../../atom.xml" rel="alternate" title="RSS" type="application/rss+xml">
+  </head>
+  <body>
+    <!--
+      Target for toggling the sidebar `.sidebar-checkbox` is for regular
+      styles, `#sidebar-checkbox` for behavior.
+    -->
+    <input class="sidebar-checkbox" id="sidebar-checkbox" type="checkbox">
+      <!-- Toggleable sidebar -->
+    
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-item">
+        <p>
+          Create a site with Nanoc.<br>
+          Write in Markdown and HAML.<br>
+        </p>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item ">
+          <a href="../../">Home</a>
+        </div>
+        <!--
+          The code below dynamically generates a sidebar nav of pages with
+          `layout: page` in the front-matter. See readme for usage.
+        -->
+        <div class="sidebar-nav-item ">
+          <a href="../../pages/about/">About</a>
+        </div>
+      </nav>
+      <div class="sidebar-item">
+        <p>
+          ©
+          2016
+          All rights reserved.
+        </p>
+      </div>
+    </div>
+    <!--
+      Wrap is the content to shift when toggling the sidebar. We wrap the
+      content to avoid any CSS collisions with our real content.
+    -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../../">Nanoc Blog Site</a>
+            <small>
+              Created by <a href="https://github.com/NicholasTD07">Nicholas T.</a>
+            </small>
+          </h3>
+        </div>
+      </div>
+      <div class="container content">
+        <p>TL;DR</p>
+        
+        <ol>
+        <li>Download this repo (as zip or clone)</li>
+        <li>Install Dependencies: <code>rake bootstrap</code>
+        </li>
+        <li>Configure <code>nanoc.yaml</code> (just 3 lines)</li>
+        <li>Write with your favorite editor</li>
+        <li>Generate site with one line: <code>nanoc</code>
+        </li>
+        <li><strong>DONE!</strong></li>
+        </ol>
+        
+        <p>Too easy for anyone!</p>
+        
+        <!-- more -->
+        
+        <h3>Setup:</h3>
+        
+        <p>First you need to have Ruby, Python and Bundler working.</p>
+        
+        <p>If you have installed <code>rake</code>, run the following command to install dependencies:</p>
+        <div class="highlight"><pre>rake b <span class="c"># b for bootstrap</span>
+<span class="c"># It installs the dependencies with `pip` and `bundle`</span>
+<span class="c"># See Rakefile for more details</span>
+
+<span class="c"># Go to next section for configuring Nanoc Blog Site</span></pre></div>
+        <p>Otherwise, install dependencies with <code>bundler</code> and <code>pip</code>:</p>
+        <div class="highlight"><pre>pip install Pygments
+bundle install</pre></div>
+        <h3>Configure</h3>
+        
+        <p>You will find <code>nanoc.yaml</code> under the root folder.</p>
+        
+        <p>To use Nanoc Blog Site, you only need to set the <code>title</code>, <code>tagline</code> and
+        <code>description</code> in the <code>site</code> section to your preference.</p>
+        <div class="highlight"><pre><span class="c1"># nanoc.yaml</span>
+
+<span class="l-Scalar-Plain">site</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">"Nanoc</span><span class="nv"> </span><span class="s">Blog</span><span class="nv"> </span><span class="s">Site"</span>
+  <span class="l-Scalar-Plain">tagline</span><span class="p-Indicator">:</span> <span class="s">'Created</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href="https://github.com/NicholasTD07"&gt;Nicholas</span><span class="nv"> </span><span class="s">T.&lt;/a&gt;'</span>
+  <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
+    <span class="no">Create a site with Nanoc.&lt;br&gt;</span>
+    <span class="no">Write in Markdown and HAML.&lt;br&gt;</span></pre></div>
+        <h3>Usage:</h3>
+        
+        <ul>
+        <li>Use <code>rake new["Post Name"]</code> to create new posts in <code>content/posts/</code>
+        </li>
+        <li>Edit the new post with your favorite editor</li>
+        <li>Run <code>bundle exec guard</code> to re-gen the site when there's any change to the source of the site</li>
+        <li>Run <code>nanoc view</code> to create a local server which serves the generated site</li>
+        </ul>
+        
+        <h3>How was it built?</h3>
+        
+        <p>See <a href="../2016-01-25-new-blog-site-with-nanoc/">this post</a> for more details of how
+        Nanoc Blog Site was built.</p>
+      </div>
+    </div>
+    <label class="sidebar-toggle" for="sidebar-checkbox"></label>
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+      
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+      
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+      
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

@@ -7,7 +7,7 @@
     <!-- Enable responsiveness on mobile devices -->
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
     <title>
-      New Blog Site With Nanoc · Nicholas T.
+      New Blog Site With Nanoc · Nanoc Blog Site
     </title>
     <!-- CSS -->
     <link href="../../public/css/poole.css" rel="stylesheet">
@@ -31,7 +31,8 @@
     <div class="sidebar" id="sidebar">
       <div class="sidebar-item">
         <p>
-          Things I learn along the way.
+          Create a site with Nanoc.<br>
+          Write in Markdown and HAML.<br>
         </p>
       </div>
       <nav class="sidebar-nav">
@@ -62,15 +63,15 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="../../">Nicholas T.</a>
+            <a href="../../">Nanoc Blog Site</a>
             <small>
-              An iOS Developer
+              Created by <a href="https://github.com/NicholasTD07">Nicholas T.</a>
             </small>
           </h3>
         </div>
       </div>
       <div class="container content">
-        <p>Spent about a day to make this <strong>shinny</strong> new blog site with <a href="http://nanoc.ws/">Nanoc</a> and some other open source tools.</p>
+        <p>Spent a weekend to make this <strong>shinny</strong> new blog site with <a href="http://nanoc.ws/">Nanoc</a> and some other open source tools.</p>
         
         <p>Summary:</p>
         
@@ -95,23 +96,6 @@
         
         <!-- more -->
         
-        <h2>How to Use This Blog Site as a Template for Your Site(s)</h2>
-        
-        <p>Setup:</p>
-        <div class="highlight"><pre>rake b <span class="c"># b for bootstrap</span>
-<span class="c"># It installs the dependencies with `pip` and `bundle`</span>
-<span class="c"># See Rakefile for more details</span>
-
-<span class="c"># DONE! That's all.</span></pre></div>
-        <p>Usage:</p>
-        
-        <ul>
-        <li>Use <code>rake new[post-name]</code> to create new posts in <code>content/posts/</code>
-        </li>
-        <li>Run <code>bundle exec guard</code> to re-gen the site when there's any change to the source of the site</li>
-        <li>Run <code>nanoc view</code> to create a local server which serves the generated site</li>
-        </ul>
-        
         <h2>Why Nanoc?</h2>
         
         <p>Nanoc is simple to set up and use, and it allows you to pick things you like to
@@ -127,12 +111,17 @@
         <li>I know this site and its source code inside out</li>
         </ul>
         </li>
-        <li>Jekyll (previous static generator powering my blog) is a black box to me
+        </ul>
+        
+        <p>When comparing Jekyll (previous static generator powering my blog) with Nanoc</p>
+        
+        <ul>
+        <li>Jekyll is a black box to me
         
         <ul>
         <li>Complex</li>
         <li>Hard to tweak</li>
-        <li>Code, written by other people, to read</li>
+        <li>Code (written by other people) to read</li>
         </ul>
         </li>
         </ul>
@@ -141,9 +130,9 @@
         
         <p>First you need to have Ruby, Python and Bundler working.</p>
         
-        <p>Make a directory for your site.
-        I like to do it in command line <code>mkdir your-site-name</code>. You can do it anyway you
-        like. <code>cd</code> into your site in your terminal/command-line.</p>
+        <p>Make a directory for your site.  I like doing it in command line with <code>mkdir
+your-site-name</code>. You can do it anyway you like. <code>cd</code> into your site in your
+        terminal/command-line.</p>
         
         <p>Before we run any command in a terminal, put the contents of <code>Gemfile</code> and
         <code>.gitignore</code> into them respectively (in the newly created directory).</p>
@@ -151,10 +140,9 @@
         <p>Gemfile:</p>
         <div class="highlight"><pre><span class="n">gem</span> <span class="s1">'nanoc'</span> <span class="c1"># Core</span>
 <span class="n">gem</span> <span class="s1">'adsf'</span>  <span class="c1"># for `nanoc view`</span>
-<span class="n">gem</span> <span class="s1">'rake'</span>
-<span class="n">gem</span> <span class="s1">'nokogiri'</span></pre></div>
+<span class="n">gem</span> <span class="s1">'rake'</span>  <span class="c1"># for writing tasks help us blogging</span></pre></div>
         <p>.gitignore:</p>
-        <div class="highlight"><pre><span class="c"># If you use git for version control,</span>
+        <div class="highlight"><pre><span class="c"># If you use git for version control, which you should,</span>
 <span class="c"># otherwise you don't need this.</span>
 crash.log
 tmp/
@@ -163,7 +151,7 @@ output/</pre></div>
         
         <h2>Create a Site with Nanoc</h2>
         
-        <p>After you have all the gems ready, run <code>nanoc create-site . -f</code> to
+        <p>After you have all the gems installed, run <code>nanoc create-site . -f</code> to
         create a site while you are in the site directory. <code>-f</code> is needed because the
         directory already exists.</p>
         
@@ -187,7 +175,7 @@ output/</pre></div>
         <p>Nanoc provides handy <a href="http://nanoc.ws/doc/reference/helpers/">helpers</a> for us to
         build our site faster. Include the <code>Blogging, LinkTo, Rendering, Tagging</code> helpers by placing
         a ruby file under <code>lib/</code>(in the root dir of your nanoc site dir) </p>
-        <div class="highlight"><pre><span class="c1"># nanoc-site/lib/include_helpers.rb</span>
+        <div class="highlight"><pre><span class="c1"># your-nanoc-site/lib/include_helpers.rb</span>
 <span class="kp">include</span> <span class="no">Nanoc</span><span class="o">::</span><span class="no">Helpers</span><span class="o">::</span><span class="no">Blogging</span>
 <span class="kp">include</span> <span class="no">Nanoc</span><span class="o">::</span><span class="no">Helpers</span><span class="o">::</span><span class="no">LinkTo</span>
 <span class="kp">include</span> <span class="no">Nanoc</span><span class="o">::</span><span class="no">Helpers</span><span class="o">::</span><span class="no">Rendering</span>
@@ -227,10 +215,10 @@ output/</pre></div>
         <h3>Add a Rule for Markdown Files</h3>
         
         <blockquote>
-        <p>The Rules file is used to describe the processing rules for items and layouts.</p>
+        <p>The <code>Rules</code> file is used to describe the processing rules for items and layouts.</p>
         </blockquote>
         
-        <p>This is the file that needs to be modified in order to tell Nanoc to use the
+        <p>The <code>Rules</code> file needs to be modified in order to tell Nanoc to use the
         redcarpet filter, which is provided by Nanoc.</p>
         <div class="highlight"><pre><span class="c1"># Add this into Rules</span>
 <span class="n">compile</span> <span class="s1">'/**/*.md'</span> <span class="k">do</span>
@@ -265,7 +253,7 @@ output/</pre></div>
         
         <h3>Enable Syntax Highlighting for Markdown</h3>
         
-        <p>To enable syntax highlighting easily, we will need to write a custom filter
+        <p>To enable syntax highlighting <strong>easily</strong>, we will need to write a custom filter
         which combines the power of <a href="https://github.com/vmg/redcarpet">RedCarpet</a>
         (Markdown -&gt; HTML) and <a href="http://pygments.org/">Pygments</a> (Master of Syntax
         Highlighting).</p>
@@ -318,10 +306,14 @@ output/</pre></div>
         <h2>Use <code>guard</code>
         </h2>
         
+        <p class="message">
+          Finally! XD
+        </p>
+        
         <p>Are you tired of typing <code>nanoc</code> again and again when every time you make a
         change to the site? Guard is here to help you!</p>
         
-        <p>Put the content into their files respectively.</p>
+        <p>Put following snippets into files respectively.</p>
         <div class="highlight"><pre><span class="c1"># Add these in Gemfile</span>
 <span class="n">gem</span> <span class="s1">'guard-nanoc'</span>
 <span class="n">gem</span> <span class="s1">'guard-bundler'</span>
@@ -356,15 +348,17 @@ output/</pre></div>
         
         <h2>Use HAML as Template Language</h2>
         
-        <p>You can skip this section if you are not interested in using HAML.</p>
+        <p>You can skip this section if you are not interested in using <a href="http://haml.info/">HAML</a>.</p>
         
         <p>Update <code>Gemfile</code>:</p>
         <div class="highlight"><pre><span class="c1"># Add it to Gemfile</span>
 <span class="n">gem</span> <span class="s1">'haml'</span></pre></div>
         <h3>Code block</h3>
         
-        <p>Use <code>~ yield</code> rather than <code>= yield</code> in <code>layouts/*</code> otherwise you will get wrong indentation in
+        <p>Use <code>~ yield</code> rather than <code>= yield</code> in <code>layouts/*.haml</code> otherwise you will get wrong indentation in
         code blocks.</p>
+        
+        <p>See this commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/22e84dd">#22e84dd</a></p>
         
         <h3>Add/Update Rules</h3>
         
@@ -465,14 +459,15 @@ output/</pre></div>
         <h2>TODOs</h2>
         
         <ul>
+        <li>Multilingual (see <a href="http://nanoc.ws/doc/guides/creating-multilingual-sites/">this doc from Nanoc</a>)</li>
         <li>Pagination</li>
         </ul>
         
         <h3>Assets Pipeline</h3>
         
         <ul>
-        <li>[  ] Compile css files into one</li>
-        <li>[  ] Compile js files into one</li>
+        <li>[  ] Compile CSS files into one</li>
+        <li>[  ] Compile JS files into one</li>
         </ul>
         
         <h2>Reference</h2>
