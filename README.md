@@ -40,5 +40,5 @@ Read the more detailed [How to Use this Blog Site](http://dev.nicktd.com/nanoc-b
 
 ### Assets Pipeline
 
-* [  ] Compile CSS files into one
-* [  ] Compile JS files into one
+* [ ] Compile CSS files into one
+* [ ] Compile JS files into one
