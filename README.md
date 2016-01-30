@@ -4,6 +4,8 @@ A blog site created with Nanoc and other open source tools.
 
 Demo: http://dev.nicktd.com/nanoc-blog-site/
 
+![Screenshot(sidebar hidden)](https://dl.dropboxusercontent.com/u/212792226/screenshots/nanoc-blog-site-v1.0.0-sidebar-hidden.png)
+![Screenshot(sidebar shown)](https://dl.dropboxusercontent.com/u/212792226/screenshots/nanoc-blog-site-v1.0.0-sidebar-shown.png)
 
 ## Summary of its "Stack"
 
