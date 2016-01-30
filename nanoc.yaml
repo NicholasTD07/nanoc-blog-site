@@ -2,10 +2,11 @@
 
 site:
   title: "Nanoc Blog Site"
-  tagline: 'Created by <a href="https://github.com/NicholasTD07">Nicholas T.</a>'
+  tagline: 'Created by Nicholas T.'
   description: |
     Create a site with Nanoc.<br>
     Write in Markdown and HAML.<br>
+    Made by <a href="https://github.com/NicholasTD07">Nicholas T.</a>
 
 # NANOC CONFIG #
 
