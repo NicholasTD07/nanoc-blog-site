@@ -1,0 +1,7 @@
+- sorted_articles.each do |post|
+  .post
+    %h1.post-title
+      = link_to post[:title], post.path
+    %span.post-date
+      = post[:created_at]
+    ~ summary_of_post(post)
