@@ -1,7 +1,8 @@
-- sorted_articles.each do |post|
-  .post
-    %h1.post-title
-      = link_to post[:title], post.path
-    %span.post-date
-      = pretty_date_for_post(post)
-    ~ summary_of_post(post)
+.posts
+  - sorted_articles.each do |post|
+    .post
+      %h1.post-title
+        = link_to post[:title], post.path
+      %span.post-date
+        = pretty_date_for_post(post)
+      ~ summary_of_post(post)
