@@ -25,7 +25,9 @@ end
 # ELSE
 # It is `/item.identifier.without_ext/(index.html)`
 route '/**/*.{html,md,haml}' do
-  if item.identifier =~ '/index.*'
+  if item[:permalink]
+    item[:permalink]
+  elsif item.identifier =~ '/index.*'
     '/index.html'
   elsif item.identifier =~ '/404.*'
     '/404.html'
