@@ -3,5 +3,5 @@
     %h1.post-title
       = link_to post[:title], post.path
     %span.post-date
-      = post[:created_at]
+      = pretty_date_for_post(post)
     ~ summary_of_post(post)
