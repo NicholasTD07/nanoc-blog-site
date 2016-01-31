@@ -1,5 +1,9 @@
 # https://github.com/nanoc/nanoc/blob/master/lib/nanoc/helpers/blogging.rb
-module Page
+module Items
+  def posts_of_year(year)
+    sorted_articles.select { |a| a[:created_at].year == year }
+  end
+
   def pages
     blk = -> { @items.select { |item| item[:kind] == 'page' } }
     if @items.frozen?
@@ -10,4 +14,4 @@ module Page
   end
 end
 
-include Page
+include Items
