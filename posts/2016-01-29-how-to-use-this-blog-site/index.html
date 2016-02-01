@@ -33,6 +33,7 @@
         <p>
           Create a site with Nanoc.<br>
           Write in Markdown and HAML.<br>
+          Made by <a href="https://github.com/NicholasTD07">Nicholas T.</a>
         </p>
       </div>
       <nav class="sidebar-nav">
@@ -65,49 +66,56 @@
           <h3 class="masthead-title">
             <a href="../../">Nanoc Blog Site</a>
             <small>
-              Created by <a href="https://github.com/NicholasTD07">Nicholas T.</a>
+              Created by Nicholas T.
             </small>
           </h3>
         </div>
       </div>
       <div class="container content">
-        <p>TL;DR</p>
-        
-        <ol>
-        <li>Download this repo (as zip or clone)</li>
-        <li>Install Dependencies: <code>rake bootstrap</code>
-        </li>
-        <li>Configure <code>nanoc.yaml</code> (just 3 lines)</li>
-        <li>Write with your favorite editor</li>
-        <li>Generate site with one line: <code>nanoc</code>
-        </li>
-        <li><strong>DONE!</strong></li>
-        </ol>
-        
-        <p>Too easy for anyone!</p>
-        
-        <!-- more -->
-        
-        <h3>Setup:</h3>
-        
-        <p>First you need to have Ruby, Python and Bundler working.</p>
-        
-        <p>If you have installed <code>rake</code>, run the following command to install dependencies:</p>
-        <div class="highlight"><pre>rake b <span class="c"># b for bootstrap</span>
+        <div class="post">
+          <h1 class="post-title">
+            How to Use this Blog Site
+          </h1>
+          <span class="post-date">
+            January 29, 2016
+          </span>
+          <p>TL;DR</p>
+          
+          <ol>
+          <li>Download this repo (as zip or clone)</li>
+          <li>Install Dependencies: <code>rake bootstrap</code>
+          </li>
+          <li>Configure <code>nanoc.yaml</code> (just 3 lines)</li>
+          <li>Write with your favorite editor</li>
+          <li>Generate site with one line: <code>nanoc</code>
+          </li>
+          <li><strong>DONE!</strong></li>
+          </ol>
+          
+          <p>Too easy for anyone!</p>
+          
+          <!-- more -->
+          
+          <h3>Setup:</h3>
+          
+          <p>First you need to have Ruby, Python and Bundler working.</p>
+          
+          <p>If you have installed <code>rake</code>, run the following command to install dependencies:</p>
+          <div class="highlight"><pre>rake b <span class="c"># b for bootstrap</span>
 <span class="c"># It installs the dependencies with `pip` and `bundle`</span>
 <span class="c"># See Rakefile for more details</span>
 
 <span class="c"># Go to next section for configuring Nanoc Blog Site</span></pre></div>
-        <p>Otherwise, install dependencies with <code>bundler</code> and <code>pip</code>:</p>
-        <div class="highlight"><pre>pip install Pygments
+          <p>Otherwise, install dependencies with <code>bundler</code> and <code>pip</code>:</p>
+          <div class="highlight"><pre>pip install Pygments
 bundle install</pre></div>
-        <h3>Configure</h3>
-        
-        <p>You will find <code>nanoc.yaml</code> under the root folder.</p>
-        
-        <p>To use Nanoc Blog Site, you only need to set the <code>title</code>, <code>tagline</code> and
-        <code>description</code> in the <code>site</code> section to your preference.</p>
-        <div class="highlight"><pre><span class="c1"># nanoc.yaml</span>
+          <h3>Configure</h3>
+          
+          <p>You will find <code>nanoc.yaml</code> under the root folder.</p>
+          
+          <p>To use Nanoc Blog Site, you only need to set the <code>title</code>, <code>tagline</code> and
+          <code>description</code> in the <code>site</code> section to your preference.</p>
+          <div class="highlight"><pre><span class="c1"># nanoc.yaml</span>
 
 <span class="l-Scalar-Plain">site</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">"Nanoc</span><span class="nv"> </span><span class="s">Blog</span><span class="nv"> </span><span class="s">Site"</span>
@@ -115,20 +123,26 @@ bundle install</pre></div>
   <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
     <span class="no">Create a site with Nanoc.&lt;br&gt;</span>
     <span class="no">Write in Markdown and HAML.&lt;br&gt;</span></pre></div>
-        <h3>Usage:</h3>
-        
-        <ul>
-        <li>Use <code>rake new["Post Name"]</code> to create new posts in <code>content/posts/</code>
-        </li>
-        <li>Edit the new post with your favorite editor</li>
-        <li>Run <code>bundle exec guard</code> to re-gen the site when there's any change to the source of the site</li>
-        <li>Run <code>nanoc view</code> to create a local server which serves the generated site</li>
-        </ul>
-        
-        <h3>How was it built?</h3>
-        
-        <p>See <a href="../2016-01-25-new-blog-site-with-nanoc/">this post</a> for more details of how
-        Nanoc Blog Site was built.</p>
+          <h3>Usage:</h3>
+          
+          <ul>
+          <li>Use <code>rake new["Post Name"]</code> to create new posts in <code>content/posts/</code>
+          </li>
+          <li>Edit the new post with your favorite editor</li>
+          <li>Run <code>bundle exec guard</code> to re-gen the site when there's any change to the source of the site</li>
+          <li>Run <code>nanoc view</code> to create a local server which serves the generated site</li>
+          </ul>
+          
+          <h3>How was it built?</h3>
+          
+          <p>See <a href="../2016-01-25-new-blog-site-with-nanoc/">this post</a> for more details of how
+          Nanoc Blog Site was built.</p>
+          <div class="related">
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <label class="sidebar-toggle" for="sidebar-checkbox"></label>

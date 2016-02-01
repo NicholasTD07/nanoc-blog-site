@@ -33,6 +33,7 @@
         <p>
           Create a site with Nanoc.<br>
           Write in Markdown and HAML.<br>
+          Made by <a href="https://github.com/NicholasTD07">Nicholas T.</a>
         </p>
       </div>
       <nav class="sidebar-nav">
@@ -65,177 +66,184 @@
           <h3 class="masthead-title">
             <a href="../../">Nanoc Blog Site</a>
             <small>
-              Created by <a href="https://github.com/NicholasTD07">Nicholas T.</a>
+              Created by Nicholas T.
             </small>
           </h3>
         </div>
       </div>
       <div class="container content">
-        <p>Spent a weekend to make this <strong>shinny</strong> new blog site with <a href="http://nanoc.ws/">Nanoc</a> and some other open source tools.</p>
-        
-        <p>Summary:</p>
-        
-        <ul>
-        <li>
-        <a href="http://nanoc.ws/">Nanoc</a> as static site generator</li>
-        <li>
-        <a href="http://haml.info/">HAML</a> as template engine</li>
-        <li>
-        <a href="http://lanyon.getpoole.com/">Lanyon</a> as the theme you are seeing right now</li>
-        <li>
-        <a href="https://github.com/guard/guard">Guard</a> for regenerating site and live-reloading browser</li>
-        <li>
-        <a href="https://github.com/ruby/rake">Rake</a> for manging tasks</li>
-        <li>
-        <a href="http://pygments.org/">Pygments</a> for syntax highlighting</li>
-        <li>
-        <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a> for writing blogs</li>
-        </ul>
-        
-        <p>Wanna know how this fantastic blog came alive?</p>
-        
-        <!-- more -->
-        
-        <h2>Why Nanoc?</h2>
-        
-        <p>Nanoc is simple to set up and use, and it allows you to pick things you like to
-        build the site you want, though it could take some time to build your very own
-        blog/site generator because Nanoc is so generic.</p>
-        
-        <ul>
-        <li>Nanoc is very flexible</li>
-        <li>Nanoc is easy to be extended</li>
-        <li>I can build everything from scratch
-        
-        <ul>
-        <li>I know this site and its source code inside out</li>
-        </ul>
-        </li>
-        </ul>
-        
-        <p>When comparing Jekyll (previous static generator powering my blog) with Nanoc</p>
-        
-        <ul>
-        <li>Jekyll is a black box to me
-        
-        <ul>
-        <li>Complex</li>
-        <li>Hard to tweak</li>
-        <li>Code (written by other people) to read</li>
-        </ul>
-        </li>
-        </ul>
-        
-        <h2>Getting Started</h2>
-        
-        <p>First you need to have Ruby, Python and Bundler working.</p>
-        
-        <p>Make a directory for your site.  I like doing it in command line with <code>mkdir
+        <div class="post">
+          <h1 class="post-title">
+            New Blog Site With Nanoc
+          </h1>
+          <span class="post-date">
+            January 25, 2016
+          </span>
+          <p>Spent a weekend to make this <strong>shinny</strong> new blog site with <a href="http://nanoc.ws/">Nanoc</a> and some other open source tools.</p>
+          
+          <p>Summary:</p>
+          
+          <ul>
+          <li>
+          <a href="http://nanoc.ws/">Nanoc</a> as static site generator</li>
+          <li>
+          <a href="http://haml.info/">HAML</a> as template engine</li>
+          <li>
+          <a href="http://lanyon.getpoole.com/">Lanyon</a> as the theme you are seeing right now</li>
+          <li>
+          <a href="https://github.com/guard/guard">Guard</a> for regenerating site and live-reloading browser</li>
+          <li>
+          <a href="https://github.com/ruby/rake">Rake</a> for manging tasks</li>
+          <li>
+          <a href="http://pygments.org/">Pygments</a> for syntax highlighting</li>
+          <li>
+          <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a> for writing blogs</li>
+          </ul>
+          
+          <p>Wanna know how this fantastic blog came alive?</p>
+          
+          <!-- more -->
+          
+          <h2>Why Nanoc?</h2>
+          
+          <p>Nanoc is simple to set up and use, and it allows you to pick things you like to
+          build the site you want, though it could take some time to build your very own
+          blog/site generator because Nanoc is so generic.</p>
+          
+          <ul>
+          <li>Nanoc is very flexible</li>
+          <li>Nanoc is easy to be extended</li>
+          <li>I can build everything from scratch
+          
+          <ul>
+          <li>I know this site and its source code inside out</li>
+          </ul>
+          </li>
+          </ul>
+          
+          <p>When comparing Jekyll (previous static generator powering my blog) with Nanoc</p>
+          
+          <ul>
+          <li>Jekyll is a black box to me
+          
+          <ul>
+          <li>Complex</li>
+          <li>Hard to tweak</li>
+          <li>Code (written by other people) to read</li>
+          </ul>
+          </li>
+          </ul>
+          
+          <h2>Getting Started</h2>
+          
+          <p>First you need to have Ruby, Python and Bundler working.</p>
+          
+          <p>Make a directory for your site.  I like doing it in command line with <code>mkdir
 your-site-name</code>. You can do it anyway you like. <code>cd</code> into your site in your
-        terminal/command-line.</p>
-        
-        <p>Before we run any command in a terminal, put the contents of <code>Gemfile</code> and
-        <code>.gitignore</code> into them respectively (in the newly created directory).</p>
-        
-        <p>Gemfile:</p>
-        <div class="highlight"><pre><span class="n">gem</span> <span class="s1">'nanoc'</span> <span class="c1"># Core</span>
+          terminal/command-line.</p>
+          
+          <p>Before we run any command in a terminal, put the contents of <code>Gemfile</code> and
+          <code>.gitignore</code> into them respectively (in the newly created directory).</p>
+          
+          <p>Gemfile:</p>
+          <div class="highlight"><pre><span class="n">gem</span> <span class="s1">'nanoc'</span> <span class="c1"># Core</span>
 <span class="n">gem</span> <span class="s1">'adsf'</span>  <span class="c1"># for `nanoc view`</span>
 <span class="n">gem</span> <span class="s1">'rake'</span>  <span class="c1"># for writing tasks help us blogging</span></pre></div>
-        <p>.gitignore:</p>
-        <div class="highlight"><pre><span class="c"># If you use git for version control, which you should,</span>
+          <p>.gitignore:</p>
+          <div class="highlight"><pre><span class="c"># If you use git for version control, which you should,</span>
 <span class="c"># otherwise you don't need this.</span>
 crash.log
 tmp/
 output/</pre></div>
-        <p>Run <code>bundle install</code> to install all the shiny gems. Let's start the party!</p>
-        
-        <h2>Create a Site with Nanoc</h2>
-        
-        <p>After you have all the gems installed, run <code>nanoc create-site . -f</code> to
-        create a site while you are in the site directory. <code>-f</code> is needed because the
-        directory already exists.</p>
-        
-        <p>To view your site:</p>
-        
-        <ul>
-        <li>Type <code>nanoc</code> to compile the site.</li>
-        <li>Run <code>nanoc view</code> to have Nanoc create a server for you to view your site in
-        a browser.</li>
-        </ul>
-        
-        <p>You can keep the <code>nanoc view</code> running while making changes to your site.
-        However, with every change you make to the site, you will need to run <code>nanoc</code>
-        again. It sounds very repetitive, right? Don't worry. We will be using Guard to
-        help us automate things.</p>
-        
-        <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/1e2fabe">#1e2fabe</a></p>
-        
-        <h2>Including Helpers</h2>
-        
-        <p>Nanoc provides handy <a href="http://nanoc.ws/doc/reference/helpers/">helpers</a> for us to
-        build our site faster. Include the <code>Blogging, LinkTo, Rendering, Tagging</code> helpers by placing
-        a ruby file under <code>lib/</code>(in the root dir of your nanoc site dir) </p>
-        <div class="highlight"><pre><span class="c1"># your-nanoc-site/lib/include_helpers.rb</span>
+          <p>Run <code>bundle install</code> to install all the shiny gems. Let's start the party!</p>
+          
+          <h2>Create a Site with Nanoc</h2>
+          
+          <p>After you have all the gems installed, run <code>nanoc create-site . -f</code> to
+          create a site while you are in the site directory. <code>-f</code> is needed because the
+          directory already exists.</p>
+          
+          <p>To view your site:</p>
+          
+          <ul>
+          <li>Type <code>nanoc</code> to compile the site.</li>
+          <li>Run <code>nanoc view</code> to have Nanoc create a server for you to view your site in
+          a browser.</li>
+          </ul>
+          
+          <p>You can keep the <code>nanoc view</code> running while making changes to your site.
+          However, with every change you make to the site, you will need to run <code>nanoc</code>
+          again. It sounds very repetitive, right? Don't worry. We will be using Guard to
+          help us automate things.</p>
+          
+          <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/1e2fabe">#1e2fabe</a></p>
+          
+          <h2>Including Helpers</h2>
+          
+          <p>Nanoc provides handy <a href="http://nanoc.ws/doc/reference/helpers/">helpers</a> for us to
+          build our site faster. Include the <code>Blogging, LinkTo, Rendering, Tagging</code> helpers by placing
+          a ruby file under <code>lib/</code>(in the root dir of your nanoc site dir) </p>
+          <div class="highlight"><pre><span class="c1"># your-nanoc-site/lib/include_helpers.rb</span>
 <span class="kp">include</span> <span class="no">Nanoc</span><span class="o">::</span><span class="no">Helpers</span><span class="o">::</span><span class="no">Blogging</span>
 <span class="kp">include</span> <span class="no">Nanoc</span><span class="o">::</span><span class="no">Helpers</span><span class="o">::</span><span class="no">LinkTo</span>
 <span class="kp">include</span> <span class="no">Nanoc</span><span class="o">::</span><span class="no">Helpers</span><span class="o">::</span><span class="no">Rendering</span>
 <span class="kp">include</span> <span class="no">Nanoc</span><span class="o">::</span><span class="no">Helpers</span><span class="o">::</span><span class="no">Tagging</span></pre></div>
-        <blockquote>
-        <p>Files in the <code>lib</code>/ directory are loaded alphabetically. This can cause Nanoc to try to include a helper before it is loaded.</p>
-        </blockquote>
-        
-        <p>Read more: <a href="http://nanoc.ws/doc/helpers/&lt;a%20href=https://github.com/NicholasTD07/nanoc-blog-site/commit/pitfall&gt;#pitfall&lt;/a&gt;-helper-load-order">Pitfall: helper load order</a></p>
-        
-        <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/15c0feb">#15c0feb</a></p>
-        
-        <h2>Enable Markdown</h2>
-        
-        <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/a38e3e1">#a38e3e1</a></p>
-        
-        <p><del>I took a detour in the commit above because I was using kramedown for the
-        Markdown parser. If you find unrelated changes in that commit, that's it.</del></p>
-        
-        <p>From Nanoc's official tutorial,</p>
-        
-        <blockquote>
-        <p>Nanoc has filters, which transform content from one format into another.</p>
-        </blockquote>
-        
-        <p>There are predefined filters. It is also very easy to write one by yourself.</p>
-        
-        <h3>Enable GitHub Flavored Markdown</h3>
-        
-        <p>Add the RedCarpet gem into <code>Gemfile</code>.</p>
-        <div class="highlight"><pre><span class="c1"># Add it to Gemfile</span>
+          <blockquote>
+          <p>Files in the <code>lib</code>/ directory are loaded alphabetically. This can cause Nanoc to try to include a helper before it is loaded.</p>
+          </blockquote>
+          
+          <p>Read more: <a href="http://nanoc.ws/doc/helpers/&lt;a%20href=https://github.com/NicholasTD07/nanoc-blog-site/commit/pitfall&gt;#pitfall&lt;/a&gt;-helper-load-order">Pitfall: helper load order</a></p>
+          
+          <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/15c0feb">#15c0feb</a></p>
+          
+          <h2>Enable Markdown</h2>
+          
+          <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/a38e3e1">#a38e3e1</a></p>
+          
+          <p><del>I took a detour in the commit above because I was using kramedown for the
+          Markdown parser. If you find unrelated changes in that commit, that's it.</del></p>
+          
+          <p>From Nanoc's official tutorial,</p>
+          
+          <blockquote>
+          <p>Nanoc has filters, which transform content from one format into another.</p>
+          </blockquote>
+          
+          <p>There are predefined filters. It is also very easy to write one by yourself.</p>
+          
+          <h3>Enable GitHub Flavored Markdown</h3>
+          
+          <p>Add the RedCarpet gem into <code>Gemfile</code>.</p>
+          <div class="highlight"><pre><span class="c1"># Add it to Gemfile</span>
 <span class="n">gem</span> <span class="s1">'redcarpet'</span>
 
 <span class="c1"># Remeber to run `bundle` after editing the Gemfile</span></pre></div>
-        <p><a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a></p>
-        
-        <h3>Add a Rule for Markdown Files</h3>
-        
-        <blockquote>
-        <p>The <code>Rules</code> file is used to describe the processing rules for items and layouts.</p>
-        </blockquote>
-        
-        <p>The <code>Rules</code> file needs to be modified in order to tell Nanoc to use the
-        redcarpet filter, which is provided by Nanoc.</p>
-        <div class="highlight"><pre><span class="c1"># Add this into Rules</span>
+          <p><a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a></p>
+          
+          <h3>Add a Rule for Markdown Files</h3>
+          
+          <blockquote>
+          <p>The <code>Rules</code> file is used to describe the processing rules for items and layouts.</p>
+          </blockquote>
+          
+          <p>The <code>Rules</code> file needs to be modified in order to tell Nanoc to use the
+          redcarpet filter, which is provided by Nanoc.</p>
+          <div class="highlight"><pre><span class="c1"># Add this into Rules</span>
 <span class="n">compile</span> <span class="s1">'/**/*.md'</span> <span class="k">do</span>
   <span class="n">filter</span> <span class="ss">:redcarpet</span>
   <span class="n">layout</span> <span class="s1">'/default.*'</span>
 <span class="k">end</span></pre></div>
-        <blockquote>
-        <p>Compilation rules describe how items are processed.</p>
-        </blockquote>
-        
-        <p>This rule matches items have the <code>md</code> extension, and says such items will run
-        the <code>redcarpet</code> filter, followed by laying out the item using the default layout.</p>
-        
-        <h3><a href="http://nanoc.ws/doc/tutorial/&lt;a%20href=https://github.com/NicholasTD07/nanoc-blog-site/commit/write&gt;#write&lt;/a&gt;-pages-in-markdown">Write Pages in Markdown (from Nanoc's Official Doc)</a></h3>
-        
-        <p>Get rid of the content in <code>content/index.html</code> (but leave the frontmatter intact), and replace it with Markdown:</p>
-        <div class="highlight"><pre><span class="o">---</span>
+          <blockquote>
+          <p>Compilation rules describe how items are processed.</p>
+          </blockquote>
+          
+          <p>This rule matches items have the <code>md</code> extension, and says such items will run
+          the <code>redcarpet</code> filter, followed by laying out the item using the default layout.</p>
+          
+          <h3><a href="http://nanoc.ws/doc/tutorial/&lt;a%20href=https://github.com/NicholasTD07/nanoc-blog-site/commit/write&gt;#write&lt;/a&gt;-pages-in-markdown">Write Pages in Markdown (from Nanoc's Official Doc)</a></h3>
+          
+          <p>Get rid of the content in <code>content/index.html</code> (but leave the frontmatter intact), and replace it with Markdown:</p>
+          <div class="highlight"><pre><span class="o">---</span>
 <span class="nl">title:</span><span class="w"> </span><span class="s2">"Denis’ Guide to Awesomeness"</span>
 <span class="o">---</span>
 
@@ -246,29 +254,29 @@ output/</pre></div>
 <span class="nl">1</span><span class="o">.</span><span class="w"> </span><span class="vg">Bread</span>
 <span class="nl">2</span><span class="o">.</span><span class="w"> </span><span class="vg">Butter</span>
 <span class="nl">3</span><span class="o">.</span><span class="w"> </span><span class="vg">Refined</span><span class="w"> </span><span class="vg">uranium</span></pre></div>
-        <p>Rename the <code>content/index.html</code> file to <code>content/index.md</code>. <code>md</code> is a file extension that is commonly used with Markdown.</p>
-        
-        <p>Run <code>nanoc</code> to re-generate your site and remember to do this when you make
-        changes to your site.</p>
-        
-        <h3>Enable Syntax Highlighting for Markdown</h3>
-        
-        <p>To enable syntax highlighting <strong>easily</strong>, we will need to write a custom filter
-        which combines the power of <a href="https://github.com/vmg/redcarpet">RedCarpet</a>
-        (Markdown -&gt; HTML) and <a href="http://pygments.org/">Pygments</a> (Master of Syntax
-        Highlighting).</p>
-        
-        <p>First install the pygments package with Python's package manager <code>pip</code>.</p>
-        <div class="highlight"><pre>pip install pygments</pre></div>
-        <p>Then update the <code>Gemfile</code> and run <code>bundle</code> again.</p>
-        <div class="highlight"><pre><span class="c1"># Add them into Gemfile</span>
+          <p>Rename the <code>content/index.html</code> file to <code>content/index.md</code>. <code>md</code> is a file extension that is commonly used with Markdown.</p>
+          
+          <p>Run <code>nanoc</code> to re-generate your site and remember to do this when you make
+          changes to your site.</p>
+          
+          <h3>Enable Syntax Highlighting for Markdown</h3>
+          
+          <p>To enable syntax highlighting <strong>easily</strong>, we will need to write a custom filter
+          which combines the power of <a href="https://github.com/vmg/redcarpet">RedCarpet</a>
+          (Markdown -&gt; HTML) and <a href="http://pygments.org/">Pygments</a> (Master of Syntax
+          Highlighting).</p>
+          
+          <p>First install the pygments package with Python's package manager <code>pip</code>.</p>
+          <div class="highlight"><pre>pip install pygments</pre></div>
+          <p>Then update the <code>Gemfile</code> and run <code>bundle</code> again.</p>
+          <div class="highlight"><pre><span class="c1"># Add them into Gemfile</span>
 <span class="n">gem</span> <span class="s1">'pygments.rb'</span>
 <span class="n">gem</span> <span class="s1">'nokogiri'</span></pre></div>
-        <h3>Custom RedCarpet Filter</h3>
-        
-        <p>Put the snippet below into a file in the <code>/lib/</code> directory. Code is explained
-        with comments in the snippet.</p>
-        <div class="highlight"><pre><span class="c1"># /lib/filters/markdown_with_pygments.rb</span>
+          <h3>Custom RedCarpet Filter</h3>
+          
+          <p>Put the snippet below into a file in the <code>/lib/</code> directory. Code is explained
+          with comments in the snippet.</p>
+          <div class="highlight"><pre><span class="c1"># /lib/filters/markdown_with_pygments.rb</span>
 <span class="nb">require</span> <span class="s1">'redcarpet'</span>
 <span class="nb">require</span> <span class="s1">'pygments.rb'</span>
 
@@ -291,35 +299,35 @@ output/</pre></div>
     <span class="no">Markdowner</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span></pre></div>
-        <p>Reference: <a href="https://github.com/flyingmachine/nanoc-blog/blob/master/lib/rule_helper.rb">https://github.com/flyingmachine/nanoc-blog/blob/master/lib/rule_helper.rb</a></p>
-        
-        <h3>Add <code>syntax.css</code> from Lanyon</h3>
-        
-        <ul>
-        <li>Download <a href="https://github.com/poole/lanyon">Lanyon</a> from GitHub</li>
-        <li>Move <code>syntax.css</code> from <code>lanyon/public/</code> to <code>site/content/</code> <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/f87e7eb">#f87e7eb</a>
+          <p>Reference: <a href="https://github.com/flyingmachine/nanoc-blog/blob/master/lib/rule_helper.rb">https://github.com/flyingmachine/nanoc-blog/blob/master/lib/rule_helper.rb</a></p>
+          
+          <h3>Add <code>syntax.css</code> from Lanyon</h3>
+          
+          <ul>
+          <li>Download <a href="https://github.com/poole/lanyon">Lanyon</a> from GitHub</li>
+          <li>Move <code>syntax.css</code> from <code>lanyon/public/</code> to <code>site/content/</code> <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/f87e7eb">#f87e7eb</a>
 </li>
-        <li>Add its path into <code>/layouts/default.html</code> <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/8b75dc2">#8b75dc2</a>
+          <li>Add its path into <code>/layouts/default.html</code> <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/8b75dc2">#8b75dc2</a>
 </li>
-        </ul>
-        
-        <h2>Use <code>guard</code>
-        </h2>
-        
-        <p class="message">
-          Finally! XD
-        </p>
-        
-        <p>Are you tired of typing <code>nanoc</code> again and again when every time you make a
-        change to the site? Guard is here to help you!</p>
-        
-        <p>Put following snippets into files respectively.</p>
-        <div class="highlight"><pre><span class="c1"># Add these in Gemfile</span>
+          </ul>
+          
+          <h2>Use <code>guard</code>
+          </h2>
+          
+          <p class="message">
+            Finally! XD
+          </p>
+          
+          <p>Are you tired of typing <code>nanoc</code> again and again when every time you make a
+          change to the site? Guard is here to help you!</p>
+          
+          <p>Put following snippets into files respectively.</p>
+          <div class="highlight"><pre><span class="c1"># Add these in Gemfile</span>
 <span class="n">gem</span> <span class="s1">'guard-nanoc'</span>
 <span class="n">gem</span> <span class="s1">'guard-bundler'</span>
 <span class="n">gem</span> <span class="s1">'guard-livereload'</span></pre></div>
-        <p>Explanation about parts of the <code>Guardfile</code> is provided by the comments in the snippet below.</p>
-        <div class="highlight"><pre><span class="c1"># Guardfile</span>
+          <p>Explanation about parts of the <code>Guardfile</code> is provided by the comments in the snippet below.</p>
+          <div class="highlight"><pre><span class="c1"># Guardfile</span>
 
 <span class="c1"># Guard will regenerate the site</span>
 <span class="c1"># When there's any change applied to</span>
@@ -342,32 +350,32 @@ output/</pre></div>
 <span class="n">guard</span> <span class="s1">'livereload'</span> <span class="k">do</span>
     <span class="n">watch</span><span class="p">(</span><span class="sr">%r{output/.*$}</span><span class="p">)</span>
 <span class="k">end</span></pre></div>
-        <p>To get live-reload working in the browser, install the <a href="http://livereload.com/extensions&lt;a%20href=https://github.com/NicholasTD07/nanoc-blog-site/commit/installing&gt;#installing&lt;/a&gt;-sections">LiveReload Safari/Chrome/Firefox extension</a>.</p>
-        
-        <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/52db121">#52db121</a></p>
-        
-        <h2>Use HAML as Template Language</h2>
-        
-        <p>You can skip this section if you are not interested in using <a href="http://haml.info/">HAML</a>.</p>
-        
-        <p>Update <code>Gemfile</code>:</p>
-        <div class="highlight"><pre><span class="c1"># Add it to Gemfile</span>
+          <p>To get live-reload working in the browser, install the <a href="http://livereload.com/extensions&lt;a%20href=https://github.com/NicholasTD07/nanoc-blog-site/commit/installing&gt;#installing&lt;/a&gt;-sections">LiveReload Safari/Chrome/Firefox extension</a>.</p>
+          
+          <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/52db121">#52db121</a></p>
+          
+          <h2>Use HAML as Template Language</h2>
+          
+          <p>You can skip this section if you are not interested in using <a href="http://haml.info/">HAML</a>.</p>
+          
+          <p>Update <code>Gemfile</code>:</p>
+          <div class="highlight"><pre><span class="c1"># Add it to Gemfile</span>
 <span class="n">gem</span> <span class="s1">'haml'</span></pre></div>
-        <h3>Code block</h3>
-        
-        <p>Use <code>~ yield</code> rather than <code>= yield</code> in <code>layouts/*.haml</code> otherwise you will get wrong indentation in
-        code blocks.</p>
-        
-        <p>See this commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/22e84dd">#22e84dd</a></p>
-        
-        <h3>Add/Update Rules</h3>
-        
-        <p>Apply following changes to the <code>Rules</code> file to get HAML working.</p>
-        <div class="highlight"><pre># Find the line with `:erb` and change erb to haml
+          <h3>Code block</h3>
+          
+          <p>Use <code>~ yield</code> rather than <code>= yield</code> in <code>layouts/*.haml</code> otherwise you will get wrong indentation in
+          code blocks.</p>
+          
+          <p>See this commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/22e84dd">#22e84dd</a></p>
+          
+          <h3>Add/Update Rules</h3>
+          
+          <p>Apply following changes to the <code>Rules</code> file to get HAML working.</p>
+          <div class="highlight"><pre># Find the line with `:erb` and change erb to haml
 <span class="gd">- layout '/**/*', :erb</span>
 <span class="gi">+ layout '/**/*', :haml</span></pre></div>
-        <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/c13139d">#c13139d</a></p>
-        <div class="highlight"><pre><span class="c1"># Add this into your Rules file</span>
+          <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/c13139d">#c13139d</a></p>
+          <div class="highlight"><pre><span class="c1"># Add this into your Rules file</span>
 <span class="n">compile</span> <span class="s1">'/**/*.haml'</span> <span class="k">do</span>
   <span class="n">filter</span> <span class="ss">:haml</span>
   <span class="n">layout</span> <span class="s1">'/default.*'</span>
@@ -376,46 +384,46 @@ output/</pre></div>
 # and add haml into the existing route
 <span class="gd">- route '/**/*.{html,md}' do</span>
 <span class="gi">+ route '/**/*.{html,md,haml}' do</span></pre></div>
-        <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/d5e8d39">#d5e8d39</a></p>
-        
-        <h2>Adopt Lanyon Theme</h2>
-        
-        <h3>CSS Files</h3>
-        
-        <ul>
-        <li>Remove the stylesheet that comes with nanoc itself</li>
-        <li>Copy and paste Lanyon's css files into <code>content/</code>, namely
-        
-        <ul>
-        <li><code>poole.css</code></li>
-        <li><code>lanyon.css</code></li>
-        </ul>
-        </li>
-        </ul>
-        
-        <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/459ea62">#459ea62</a></p>
-        
-        <h3>Rules</h3>
-        <div class="highlight"><pre><span class="c1"># Add this to Rules</span>
+          <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/d5e8d39">#d5e8d39</a></p>
+          
+          <h2>Adopt Lanyon Theme</h2>
+          
+          <h3>CSS Files</h3>
+          
+          <ul>
+          <li>Remove the stylesheet that comes with nanoc itself</li>
+          <li>Copy and paste Lanyon's css files into <code>content/</code>, namely
+          
+          <ul>
+          <li><code>poole.css</code></li>
+          <li><code>lanyon.css</code></li>
+          </ul>
+          </li>
+          </ul>
+          
+          <p>Commit: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/459ea62">#459ea62</a></p>
+          
+          <h3>Rules</h3>
+          <div class="highlight"><pre><span class="c1"># Add this to Rules</span>
 <span class="n">compile</span> <span class="s1">'/**/*.{css}'</span> <span class="k">do</span>
   <span class="n">write</span> <span class="s2">"/public/css</span><span class="si">#{</span><span class="n">item</span><span class="o">.</span><span class="n">identifier</span><span class="si">}</span><span class="s2">"</span> <span class="c1"># identifier contains '/'</span>
 <span class="k">end</span></pre></div>
-        <h3>Layouts</h3>
-        
-        <ul>
-        <li>Use <a href="http://htmltohaml.com/">Convert HTML to HAML</a> to convert HTML templates
-        into HAML</li>
-        <li>Turn Liquid template statements into HAML ones</li>
-        </ul>
-        
-        <p>Commits: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/cc306de">#cc306de</a>, <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/89a773b">#89a773b</a>, <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/72f5410">#72f5410</a></p>
-        
-        <h2>Other Interesting Bits</h2>
-        
-        <p>All is explained by the comments in the snippets below.</p>
-        
-        <h3>Rake Task: Bootstrap blogging environment</h3>
-        <div class="highlight"><pre><span class="c1"># Add description to bootstrap task</span>
+          <h3>Layouts</h3>
+          
+          <ul>
+          <li>Use <a href="http://htmltohaml.com/">Convert HTML to HAML</a> to convert HTML templates
+          into HAML</li>
+          <li>Turn Liquid template statements into HAML ones</li>
+          </ul>
+          
+          <p>Commits: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/cc306de">#cc306de</a>, <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/89a773b">#89a773b</a>, <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/72f5410">#72f5410</a></p>
+          
+          <h2>Other Interesting Bits</h2>
+          
+          <p>All is explained by the comments in the snippets below.</p>
+          
+          <h3>Rake Task: Bootstrap blogging environment</h3>
+          <div class="highlight"><pre><span class="c1"># Add description to bootstrap task</span>
 <span class="n">desc</span> <span class="s1">'Bootstrap nanoc blogging environment'</span>
 <span class="c1"># Create a new bootstrap task</span>
 <span class="n">task</span> <span class="ss">:bootstrap</span> <span class="k">do</span>
@@ -428,51 +436,57 @@ output/</pre></div>
 <span class="k">end</span>
 <span class="c1"># Alias(kind of) b to bootstrap</span>
 <span class="n">task</span> <span class="ss">:b</span> <span class="o">=&gt;</span> <span class="ss">:bootstrap</span></pre></div>
-        <h3>Filter: Link to GitHub Commit</h3>
-        
-        <p>All the links to commits in this post is processed by this filter.</p>
-        
-        <p>You can put <code>link_to_commits</code>, <code>github_username</code> and <code>repo</code> in the frontmatter
-        of a file.</p>
-        <div class="highlight"><pre><span class="nn">---</span>
+          <h3>Filter: Link to GitHub Commit</h3>
+          
+          <p>All the links to commits in this post is processed by this filter.</p>
+          
+          <p>You can put <code>link_to_commits</code>, <code>github_username</code> and <code>repo</code> in the frontmatter
+          of a file.</p>
+          <div class="highlight"><pre><span class="nn">---</span>
 <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">"Some</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">post"</span>
 <span class="l-Scalar-Plain">link_to_commits</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 <span class="l-Scalar-Plain">github_username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">NicholasTD07</span>
 <span class="l-Scalar-Plain">repo</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">nanoc-blog-site</span>
 <span class="nn">---</span></pre></div>
-        <p>This filter will go through the file and find text matching a hashtag followed
-        by a string then turn the matches into links to the commits, like this <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/a09255e">#a09255e</a>.</p>
-        
-        <p>Source: <a href="https://github.com/NicholasTD07/nanoc-blog-site/blob/master/lib/filters/link_to_github_commit.rb">lib/filters/link_to_github_commit.rb</a></p>
-        
-        <p>Commits: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/b1c7b1f">#b1c7b1f</a>, <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/b954b3c">#b954b3c</a></p>
-        
-        <h3>Rake Task: New Post</h3>
-        
-        <p>Use it like this: <code>rake new["A new blog post, YEAH!"]</code>.</p>
-        
-        <p>For ZSH users, do it this way <code>rake new\["A new blog post, YEAH!"\]</code>.</p>
-        
-        <p>It will create a blog post under <code>content/post/</code> with the filename being
-        <code>Year-Month-Date-a-new-blog-post--yeah.md</code>.</p>
-        
-        <h2>TODOs</h2>
-        
-        <ul>
-        <li>Multilingual (see <a href="http://nanoc.ws/doc/guides/creating-multilingual-sites/">this doc from Nanoc</a>)</li>
-        <li>Pagination</li>
-        </ul>
-        
-        <h3>Assets Pipeline</h3>
-        
-        <ul>
-        <li>[  ] Compile CSS files into one</li>
-        <li>[  ] Compile JS files into one</li>
-        </ul>
-        
-        <h2>Reference</h2>
-        
-        <p><a href="http://clarkdave.net/2012/02/building-a-static-blog-with-nanoc/">Building a static blog with nanoc</a></p>
+          <p>This filter will go through the file and find text matching a hashtag followed
+          by a string then turn the matches into links to the commits, like this <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/a09255e">#a09255e</a>.</p>
+          
+          <p>Source: <a href="https://github.com/NicholasTD07/nanoc-blog-site/blob/master/lib/filters/link_to_github_commit.rb">lib/filters/link_to_github_commit.rb</a></p>
+          
+          <p>Commits: <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/b1c7b1f">#b1c7b1f</a>, <a href="https://github.com/NicholasTD07/nanoc-blog-site/commit/b954b3c">#b954b3c</a></p>
+          
+          <h3>Rake Task: New Post</h3>
+          
+          <p>Use it like this: <code>rake new["A new blog post, YEAH!"]</code>.</p>
+          
+          <p>For ZSH users, do it this way <code>rake new\["A new blog post, YEAH!"\]</code>.</p>
+          
+          <p>It will create a blog post under <code>content/post/</code> with the filename being
+          <code>Year-Month-Date-a-new-blog-post--yeah.md</code>.</p>
+          
+          <h2>TODOs</h2>
+          
+          <ul>
+          <li>Multilingual (see <a href="http://nanoc.ws/doc/guides/creating-multilingual-sites/">this doc from Nanoc</a>)</li>
+          <li>Pagination</li>
+          </ul>
+          
+          <h3>Assets Pipeline</h3>
+          
+          <ul>
+          <li>[  ] Compile CSS files into one</li>
+          <li>[  ] Compile JS files into one</li>
+          </ul>
+          
+          <h2>Reference</h2>
+          
+          <p><a href="http://clarkdave.net/2012/02/building-a-static-blog-with-nanoc/">Building a static blog with nanoc</a></p>
+          <div class="related">
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <label class="sidebar-toggle" for="sidebar-checkbox"></label>
