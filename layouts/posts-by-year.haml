@@ -1,0 +1,15 @@
+:css
+  .year {
+    text-align: center;
+  }
+.posts
+  - years_of_posts.each do |year|
+    %h1.year
+      = "#{ year }"
+    - posts_of_year(year).each do |post|
+      .post
+        %h2.post-title
+          = link_to post[:title], post.path
+        %span.post-date
+          = pretty_date_for_post(post)
+        ~ summary_of_post(post)
