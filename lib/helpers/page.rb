@@ -4,6 +4,13 @@ module Items
     sorted_articles.select { |a| a[:created_at].year == year }
   end
 
+  # Returns an array of years that have posts
+  # [2016, 2015, ...]
+  def years_of_posts()
+    years = articles.map { |a| a[:created_at].year }.uniq
+    years
+  end
+
   def pages
     blk = -> { @items.select { |item| item[:kind] == 'page' } }
     if @items.frozen?
