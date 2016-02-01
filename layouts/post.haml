@@ -1,0 +1,18 @@
+= render '/default.haml' do
+  .post
+    %h1.post-title
+      = item[:title]
+    %span.post-date
+      = pretty_date_for_post(item)
+    ~ item.compiled_content
+    .related
+      %h2 Related Posts
+      %ul.related-posts
+        - related_posts = (item[:tags] || []).map { |t| items_with_tag(t) }.flatten.uniq
+        - related_posts.delete item
+        - related_posts.each do |post|
+          %li
+            %h3
+              = link_to post[:title], post.path
+              %small
+                = pretty_date_for_post(post)
