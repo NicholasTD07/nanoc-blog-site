@@ -20,6 +20,15 @@ compile '/**/*.md' do
   filter :relativize_paths, type: :html
 end
 
+compile '/**/*.{css}' do
+  write "/public/css#{item.identifier}" # identifier contains '/'
+  filter :relativize_paths, type: :css
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
 route '/**/*.{html,md,haml}' do
   if item[:permalink]
     item[:permalink]
@@ -30,15 +39,6 @@ route '/**/*.{html,md,haml}' do
   else
     item.identifier.without_ext + '/index.html'
   end
-end
-
-compile '/**/*.{css}' do
-  write "/public/css#{item.identifier}" # identifier contains '/'
-  filter :relativize_paths, type: :css
-end
-
-compile '/**/*' do
-  write item.identifier.to_s
 end
 
 layout '/**/*', :haml
