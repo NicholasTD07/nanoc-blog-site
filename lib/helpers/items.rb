@@ -19,6 +19,16 @@ module Items
       blk.call
     end
   end
+
+  def sorted_pages
+    blk = -> { pages.sort_by { |item| item[:weight] || 0 }.reverse }
+
+    if @items.frozen?
+      @sorted_article_items ||= blk.call
+    else
+      blk.call
+    end
+  end
 end
 
 include Items

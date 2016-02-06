@@ -15,7 +15,7 @@
       The code below dynamically generates a sidebar nav of pages with
       `layout: page` in the front-matter. See readme for usage.
 
-    - pages.each do |page|
+    - sorted_pages.each do |page|
       %div{class: "sidebar-nav-item #{'active' if item.path == page.path}"}
         = link_to page[:title], page.path
 
