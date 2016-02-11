@@ -8,7 +8,7 @@
     .related
       %h2 Related Posts
       %ul.related-posts
-        - related_posts = (item[:tags] || []).map { |t| items_with_tag(t) }.flatten.uniq
+        - related_posts = (item[:tags] || []).map { |t| items_with_tag(t) }.flatten.uniq.sort_by { |post| post['created_at'] }
         - related_posts.delete item
         - related_posts.each do |post|
           %li
