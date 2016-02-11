@@ -2,6 +2,16 @@
 
 require "./lib/filters/markdown_with_pygments.rb"
 
+preprocess do
+  def delete_hidden_content
+    items.delete_if { |item| item[:hidden] }
+  end
+
+  delete_hidden_content
+end
+
+ignore '/**/README.*'
+
 compile '/**/*.haml' do
   filter :haml
   layout '/default.*'
